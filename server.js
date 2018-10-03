@@ -6,8 +6,11 @@ var exphbs = require("express-handlebars");
 // Requiring our Note and Article models
 var Note = require("./models/Note.js");
 var Article = require("./models/Article.js");
+
 // Set mongoose to leverage built in JavaScript ES6 Promises
+// Connect to the Mongo DB
 mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI);
 
 // Initialize Express
 var app = express();
@@ -23,11 +26,8 @@ app.use(express.static(process.cwd() + "/public"));
 // Database configuration with mongoose
 var databaseUri = "mongodb://localhost/mongoosearticles";
 
-if (process.env.MONGODB_URI) {
-  mongoose.connect(process.env.MONGODB_URI);
-} else {
-  mongoose.connect(databaseUri);
-}
+// If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
+var MONGODB_URI = process.env.MONGODB_URI || databaseUri;
 
 var db = mongoose.connection;
 
