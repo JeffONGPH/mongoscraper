@@ -1,0 +1,67 @@
+
+h1, h2, h3, h4 {
+	font-family: sans-serif;
+}
+
+body {
+	background-position: center;
+	background-color: red;
+	font-family: sans-serif;
+}
+
+.btn-danger {
+  background-color: yellow;
+	border-color: yellow;
+	color: black;
+}
+
+.btn-danger:hover {
+  background-color: red;
+  border-color: red;
+}
+
+.panel-default>.panel-heading {
+  background-color: black;
+  color: #fff;
+}
+
+.panel-default {
+  border-color: black;
+}
+
+.artLink {
+  color: black;
+}
+
+.saved-buttons {
+  margin-right: 1em;
+}
+
+.noteText {
+  color: black;
+}
+
+.deletex {
+  color: black;
+}
+
+.main-img {
+	margin-bottom: 2em;
+	border-top: 2px solid #3f3535;
+	border-bottom: 2px solid #3f3535;
+}
+
+.savedArt {
+	margin: 0 auto;
+	width: 80%;
+}
+
+.modal-body{
+	background-size: cover;
+	background-position: center;
+}
+
+.alert-warning {
+	color: #fff;
+	background-color: black;
+	border-color: black;
